@@ -10,15 +10,8 @@ export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
   // с деструктуризацией пожалуйста
   const { money } = props;
   return (
-    // ВНАЧАЛЕ НАПИШЕМ СОВСЕМ НЕКРАСИВО
-    // props.money.banknote==='USD'
-    //     ? ЗЕЛЕНАЯ
-    //     : СИНЯЯ
-
-
-    // А ТЕПЕРЬ КРАСИВО
     <div>
-      <Banknote color={money.banknote === 'USD' ? 'green' : 'blue'}>
+      <Banknote color={money.banknote === 'USD' ? 'aquamarine' : 'lightskyblue'}>
         <Name>{money.banknote}</Name>
         <Nominal>{money.nominal}</Nominal>
       </Banknote >
@@ -26,27 +19,10 @@ export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
   );
 };
 
-
-const BanknoteGreen = styled.div`
-  background-color: aquamarine;
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-`
-
-const BanknoteBlue = styled.div`
-  background-color: lightskyblue;
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-`
-
-// tyoe BanknotePropsType = 
-
 const Banknote = styled.div<{ color: string }>`
   background-color: ${props => props.color};
-  width: 200px;
-  height: 100px;
+  width: 400px;
+  height: 200px;
   margin: 5px;
 `
 
