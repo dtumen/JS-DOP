@@ -19,7 +19,11 @@ export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
   );
 };
 
-const Banknote = styled.div<{ color: string }>`
+type ColorsType = {
+  color: 'aquamarine' | 'lightskyblue';
+}
+
+const Banknote = styled.div<ColorsType>`
   background-color: ${props => props.color};
   width: 400px;
   height: 200px;
